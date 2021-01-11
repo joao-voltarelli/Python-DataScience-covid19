@@ -1,0 +1,42 @@
+Sub dados()
+
+    Dim arquivoEntrada As String
+    
+    caminhoEntrada = "C:\Users\rodri\Downloads\COVID19_state.csv"
+    
+    Open caminhoEntrada For Input As #1
+    
+    i = 0
+    j = 0
+    coluna = 0
+    
+    Do Until EOF(1)
+    
+        Worksheets(1).Select
+        Worksheets(2).Select
+    
+        Line Input #1, linhaArquivo
+        
+        linha = Split(linhaArquivo, ",")
+        
+        ActiveCell.Offset(0, coluna).Value = linha(0)
+        ActiveCell.Offset(1, coluna).Value = linha(1)
+        ActiveCell.Offset(2, coluna).Value = linha(2)
+        ActiveCell.Offset(3, coluna).Value = linha(3)
+        ActiveCell.Offset(4, coluna).Value = linha(4)
+        ActiveCell.Offset(5, coluna).Value = linha(5)
+        ActiveCell.Offset(6, coluna).Value = linha(6)
+        ActiveCell.Offset(7, coluna).Value = linha(7)
+        ActiveCell.Offset(8, coluna).Value = linha(8)
+        ActiveCell.Offset(9, coluna).Value = linha(9)
+        ActiveCell.Offset(10, coluna).Value = linha(10)
+        ActiveCell.Offset(11, coluna).Value = linha(16)
+        ActiveCell.Offset(12, coluna).Value = linha(17)
+             
+        coluna = coluna + 1
+        
+    Loop
+    
+    Close #1
+
+End Sub

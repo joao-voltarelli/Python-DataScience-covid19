@@ -1,0 +1,55 @@
+Sub macro()
+       
+    i = 2
+    j = 1
+    
+    Open "C:\Users\rodri\Downloads\covid.arff" For Output As #1
+    
+    Do While (i < 53)
+        
+            estados = Cells(j, i)
+            estados = Replace(estados, ",", ".")
+            
+            testados = Cells(j + 1, i)
+            testados = Replace(testados, ",", ".")
+            
+            infectados = Cells(j + 2, i)
+            infectados = Replace(infectados, ",", ".")
+            
+            mortes = Cells(j + 3, i)
+            mortes = Replace(mortes, ",", ".")
+            
+            populacao = Cells(j + 4, i)
+            populacao = Replace(populacao, ",", ".")
+            
+            densidade = Cells(j + 5, i)
+            densidade = Replace(densidade, ",", ".")
+            
+            gini = Cells(j + 6, i)
+            gini = Replace(gini, ",", ".")
+            
+            uti = Cells(j + 7, i)
+            uti = Replace(uti, ",", ".")
+            
+            renda = Cells(j + 8, i)
+            renda = Replace(renda, ",", ".")
+            
+            pib = Cells(j + 9, i)
+            pib = Replace(pib, ",", ".")
+            
+            desemprego = Cells(j + 10, i)
+            desemprego = Replace(desemprego, ",", ".")
+            
+            hospitais = Cells(j + 11, i)
+            hospitais = Replace(hospitais, ",", ".")
+            
+            gastoSaude = Cells(j + 12, i)
+            gastoSaude = Replace(gastoSaude, ",", ".")
+            
+            Write #1, estados & "," & testados & "," & infectados & "," & mortes & "," & populacao & "," & densidade & "," & gini & "," & uti & "," & renda & "," & pib & "," & desemprego & "," & hospitais & "," & gastoSaude
+        
+        i = i + 1
+    Loop
+    
+    Close #1
+End Sub
