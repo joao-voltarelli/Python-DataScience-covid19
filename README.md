@@ -2,7 +2,7 @@
 
 - Projeto desenvolvido para a disciplina de Sistemas Inteligentes - Curso de Ciência da Computação
 
-- O objetivo é de através de alguns conceitos de Data Science e da utilização de algoritmos não supervisionados (K-means) analisar se a economia 
+- O objetivo é de através de alguns conceitos de Data Science e da utilização de algoritmos de aprendizado não supervisionado (K-means) analisar se a economia 
   de um determinado local exerce influência nos dados relacionados a COVID-19 (número de infectados, testados, mortos etc.)
   
 - Ferramentas utilizadas durante o desenvolvimento:
